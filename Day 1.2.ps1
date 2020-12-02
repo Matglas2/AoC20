@@ -1,4 +1,4 @@
-$source = [int32[]](Get-Content "C:\Users\NLUSR4002642\OneDrive - Maandag Interim Talent B.V\Desktop\input.txt")
+$source = [int32[]](Get-Content ".\Day 1.txt")
 
 function Find-pairs ($number, $list) {
     $list | ForEach-Object {
