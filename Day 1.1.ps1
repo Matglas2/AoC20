@@ -7,7 +7,7 @@ function Find-2020 ($number, $list) {
     }
 }
 
-$a = [int32[]](Get-Content ".\Day 1.txt")
+$a = [int32[]](Get-Content ".\ay 1.txt")
 [System.Collections.ArrayList]$b = $a
 
 $a | ForEach-Object { Find-2020 $_ $b; $b.RemoveAt(0) }
