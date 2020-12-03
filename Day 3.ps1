@@ -8,10 +8,10 @@ function TestPath ($path, $xstep, $ystep) {
     $forest = Get-Content $path                                    #Load to 2D array
 
     $x = 0; $y = 0; $count = 0;                                    #Set vars
-    0..([int]($forest.Length -1) / $ystep) | % {
+    while ($y -le ($forest.Length -1)) {
         if ($forest[$y][$x] -eq "#") { $count++ }                  #Find tree at y.x location
         $x = CircleJerk ($forest[0].Length -1) $x $xstep           #Move cursor x
-        $y += $ystep; if ($y -gt ($forest.Length -1)) { return }   #Move cursor y and return if out of bounds
+        $y += $ystep;                                              #Move cursor y
     }
 
     return $count
