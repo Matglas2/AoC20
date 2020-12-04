@@ -24,6 +24,6 @@ class Password {
     }
 }
 
-[Password[]]$passwords = Get-Content ".\Day 2.txt"
+[Password[]]$passwords = Get-Content ".\Data\Day 2.txt"
 Write-Host "Count:" @($passwords | ? { $_.ValidPart1()}).Count
 Write-Host "Count:" @($passwords | ? { $_.ValidPart2()}).Count

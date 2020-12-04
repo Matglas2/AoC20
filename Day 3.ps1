@@ -15,8 +15,8 @@ function TestPath ($path, $xstep, $ystep) {
     return $count
 }
 
-Write-Host "Right 1, down 1 | $(TestPath '.\Day 3.txt' 1 1)"
-Write-Host "Right 3, down 1 | $(TestPath '.\Day 3.txt' 3 1)"
-Write-Host "Right 5, down 1 | $(TestPath '.\Day 3.txt' 5 1)"
-Write-Host "Right 7, down 1 | $(TestPath '.\Day 3.txt' 7 1)"
-Write-Host "Right 1, down 2 | $(TestPath '.\Day 3.txt' 1 2)"
+Write-Host "Right 1, down 1 | $(TestPath '.\Data\Day 3.txt' 1 1)"
+Write-Host "Right 3, down 1 | $(TestPath '.\Data\Day 3.txt' 3 1)"
+Write-Host "Right 5, down 1 | $(TestPath '.\Data\Day 3.txt' 5 1)"
+Write-Host "Right 7, down 1 | $(TestPath '.\Data\Day 3.txt' 7 1)"
+Write-Host "Right 1, down 2 | $(TestPath '.\Data\Day 3.txt' 1 2)"
