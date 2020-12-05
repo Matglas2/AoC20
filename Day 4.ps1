@@ -26,9 +26,7 @@ class Passport {
 
 [Passport[]]$passports = ((Get-Content '.\Day 4.txt' -Raw) -replace " ","`n") -split "\n\n" | % {try{[Passport]::new($_)}catch{}}
 
-$passports | ft
-
-# no cheese allowed?
+# Cheese allowed?
 Write-Host "Part 1:" (((Get-Content '.\Day 4.txt' -Raw) -split "\n\n") -replace "cid:", "" | % {($_.ToCharArray() | ? {$_ -eq ':'}).count} | ? {$_ -gt 6}).count
 Write-Host "Part 2:" $passports.Count
 
