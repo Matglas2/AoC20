@@ -1,4 +1,3 @@
-
 $source = (Get-Content ".\Data\Day 6.txt" -raw); $part2 = 0
 Write-Host "Part 1:" $(($source -split "`n`n" | % { ($_.Replace("`n", "").ToCharArray() | Sort-Object -Unique).count } | Measure-Object -sum).Sum)
 
