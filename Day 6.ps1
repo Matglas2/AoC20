@@ -6,5 +6,4 @@ $source -split "`n`n" | % {
     $lines = $($_ | Measure-Object -Line).Lines
     $_.Replace("`n", "").ToCharArray() | Group-Object -NoElement | % { if ($_.Count -eq $lines) { $part2 ++ } }
 }
-
 Write-host "Part 2:" $part2
